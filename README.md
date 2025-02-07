@@ -11,6 +11,13 @@ This is the first project I ever worked on.
 
 I decided to publish it now because the sneaker market has changed significantly it's either dead or not what it used to be in the good old days.
 
+## How It Worked  
+
+The bot operated based on user inputs provided in **task.csv** files.  
+From these files, it extracted the necessary information to monitor and attempt to purchase the desired product.  
+
+The entire process was **fully automated** and optimized for maximum speed, as these items would sell out almost instantly due to high demand and competition from other buyers.  
+
 ## **Status**
 The bot is **not functional** as it requires a license key to run. Since the dashboard has been shut down, you can’t use it as it is.
 
