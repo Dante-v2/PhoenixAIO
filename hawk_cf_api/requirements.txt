@@ -1,0 +1,7 @@
+# Production
+cloudscraper >= 1.2.46
+lzstring >= 1.0.4
+msgpack >= 1.0.0
+cryptography >= 3.0
+urllib3 >= 1.25.10
+requests >= 2.24.0

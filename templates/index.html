@@ -1,0 +1,48 @@
+<html>
+
+  <head>
+
+    <title>Captcha Harvester</title>
+    <style type="text/css">
+      body {
+        margin: 1em 5em 0 5em;
+        font-family: sans-serif;
+        background-color: #061868
+      }
+      p {
+        font-family: sans-serif;
+        color: #e20057
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <p>Phoenix Aio Harvester</p>
+
+    <div class="g-recaptcha" data-sitekey="{{ sitekey }}" data-callback="submitToken"></div>
+    <p id="tokens">Available Tokens: 0</p>
+    <p>Domain: {{ domain }}</p>
+
+    <script type="text/javascript">
+      function submitToken() {
+        $(function() {
+          jQuery.ajax({
+            url: '/api/submit',
+            method: 'POST',
+            data: {'g-recaptcha-response': grecaptcha.getResponse()},
+            dataType: 'html'
+          })
+          grecaptcha.reset()
+        })
+      }
+    </script>
+
+    <script type="text/javascript" src=static/scripts/jquery-3.2.1.min.js></script>
+    <script type="text/javascript" src=static/scripts/captcha.js></script>
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,3 @@
+def launcher():
+
+    import main
